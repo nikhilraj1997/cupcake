@@ -388,7 +388,7 @@ jQuery(document).ready(function () {
             opt2 = jQuery('.children').find('option:selected');
 
             total = +opt1.val() + +opt2.val();
-            jQuery(".guests-select .total").html(total);
+            jQuery(".guests-select .total").aspx(total);
         });
 
 
