@@ -13,11 +13,6 @@ public partial class index : System.Web.UI.Page
     SqlConnection con;
     SqlDataAdapter da;
 
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     public void process(object sender, EventArgs e)
     {
         con = new SqlConnection(@"Data Source=.\sqlExpress;Initial Catalog=hotel;Integrated Security=True");
@@ -29,7 +24,7 @@ public partial class index : System.Web.UI.Page
         string cout = checkout.Text;
         string adult = adults.Text;
         string child = children.Text;
-
+        
         cmd = new SqlCommand("INSERT INTO bookings (email, checkin, chechout, guests) VALUES (@s,@cin, @cout , @adult)", con);
         cmd.Parameters.Add("@s", s);
         cmd.Parameters.Add("@cin", cin);
@@ -38,5 +33,7 @@ public partial class index : System.Web.UI.Page
         cmd.Parameters.Add("@adult", adult);
 
         cmd.ExecuteNonQuery();
+
+        //Response.Redirect("www.google.com");
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="boxed-background.aspx.cs" Inherits="boxed_background" %>
 
 <!DOCTYPE html>
 
@@ -48,20 +48,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/59cd19134854b82732ff2913/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
+
 <body>
+
+<!-- Background image -->
+<img src="images/background/1200x800.gif" id="background-image" alt="background image">
+<div class="boxed"> 
+
 <!-- Top header -->
 <div id="top-header">
   <div class="container">
@@ -249,97 +242,84 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">           
-        <form class="form-inline reservation-horizontal clearfix" runat="server" id="reservationform">
+        <form class="form-inline reservation-horizontal clearfix" role="form" method="post" action="php/reservation.php" name="reservationform" id="reservationform">
         <div id="message"></div><!-- Error message display -->
           <div class="row">
             <div class="col-sm-3">
               <div class="form-group">
-                <asp:Label for="email" accesskey="E" runat="server">E-mail</asp:Label>
-                  <asp:TextBox runat="server" ID="mail" class="form-control" placeholder="Please enter your E-mail"></asp:TextBox>
+                <label for="email" accesskey="E">E-mail</label>
+                <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="form-group">
-                <asp:Label runat="server" for="room">Room Type</asp:Label>
+                <label for="room">Room Type</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                <asp:DropDownList class="form-control" name="room" id="room" runat="server">
-                    <asp:ListItem selected="selected" disabled="disabled">Select a room</asp:ListItem>
-                    <asp:ListItem value="Single">Single room</asp:ListItem>
-                    <asp:ListItem value="Double">Double Room</asp:ListItem>
-                    <asp:ListItem value="Deluxe">Deluxe room</asp:ListItem>
-                </asp:DropDownList>
+                <select class="form-control" name="room" id="room">
+                  <option selected="selected" disabled="disabled">Select a room</option>
+                  <option value="Single">Single room</option>
+                  <option value="Double">Double Room</option>
+                  <option value="Deluxe">Deluxe room</option>
+                </select>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="form-group">
-                <asp:Label runat="server" for="checkin">Check-in</asp:Label>
+                <label for="checkin">Check-in</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <i class="fa fa-calendar infield"></i>
-                <asp:TextBox name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in" runat="server"></asp:TextBox>
+                <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="form-group">
-                <asp:Label  runat="server" for="checkout">Check-out</asp:Label>
+                <label for="checkout">Check-out</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <i class="fa fa-calendar infield"></i>
-                <asp:TextBox name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out" runat="server"></asp:TextBox>
+                <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
               </div>
             </div>
             <div class="col-sm-1">
               <div class="form-group">
                 <div class="guests-select">
-                  <asp:label runat="server">Guests</asp:label>
+                  <label>Guests</label>
                   <i class="fa fa-user infield"></i>
                   <div class="total form-control" id="test">1</div>
                   <div class="guests">
                     <div class="form-group adults">
-                      <asp:label runat="server" for="adults">Adults</asp:label>
+                      <label for="adults">Adults</label>
                       <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                      <asp:DropDownList name="adults" id="adults" class="form-control" runat="server">
-                        <asp:ListItem value="1">1 adult</asp:ListItem>
-                        <asp:ListItem value="2">2 adults</asp:ListItem>
-                        <asp:ListItem value="3">3 adults</asp:ListItem>
-                      </asp:DropDownList>
+                      <select name="adults" id="adults" class="form-control">
+                        <option value="1">1 adult</option>
+                        <option value="2">2 adults</option>
+                        <option value="3">3 adults</option>
+                      </select>
                     </div>
                     <div class="form-group children">
-                      <asp:label runat="server" for="children">Children</asp:label>
+                      <label for="children">Children</label>
                       <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                      <asp:DropDownList name="children" id="children" class="form-control" runat="server">
-                        <asp:ListItem value="0">0 children</asp:ListItem>
-                        <asp:ListItem value="1">1 child</asp:ListItem>
-                        <asp:ListItem value="2">2 children</asp:ListItem>
-                        <asp:ListItem value="3">3 children</asp:ListItem>
-                      </asp:DropDownList>
+                      <select name="children" id="children" class="form-control">
+                        <option value="0">0 children</option>
+                        <option value="1">1 child</option>
+                        <option value="2">2 children</option>
+                        <option value="3">3 children</option>
+                      </select>
                     </div>
-                    <div class="form-group children">
-                      <asp:label runat="server" for="children">No. of Rooms</asp:label>
-                      <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                      <asp:DropDownList name="children" id="DropDownList1" class="form-control" runat="server">
-                        <asp:ListItem value="1">1 Room</asp:ListItem>
-                        <asp:ListItem value="2">2 Rooms</asp:ListItem>
-                        <asp:ListItem value="3">3 Rooms</asp:ListItem>
-                        <asp:ListItem value="4">4 Rooms</asp:ListItem>
-                        <asp:ListItem value="5">5 Rooms</asp:ListItem>
-                        <asp:ListItem value="6">6 Rooms</asp:ListItem>
-                        <asp:ListItem value="7">7 Rooms</asp:ListItem>
-                        <asp:ListItem value="8">8 Rooms</asp:ListItem>
-                      </asp:DropDownList>
-                    </div>
-                      <button type="button" class="btn btn-default button-save btn-block">Save</button>
-                    </div>
+                    <button type="button" class="btn btn-default button-save btn-block">Save</button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-                <input runat="server" type="button" class="btn btn-primary btn-block" onserverclick="process" value="Book Now" style="margin-top:2.7vh;"/>
+              <button type="submit" class="btn btn-primary btn-block">Book Now</button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-    </section>
+</section>
+
 <!-- Rooms -->
 <section class="rooms mt50">
   <div class="container">
@@ -487,7 +467,7 @@
 </section>
 
 <!-- Parallax Effect -->
-<script type="text/javascript">$(document).ready(function () { $('#parallax-image').parallax("50%", -0.25); });</script>
+<script type="text/javascript">$(document).ready(function(){$('#parallax-image').parallax("50%", -0.25);});</script>
 
 <section class="parallax-effect mt100">
   <div id="parallax-image" style="background-image: url(./images/parallax/1900x911.gif);">
@@ -495,9 +475,8 @@
       <div class="container">
         <div class="content">
           <h3 class="text-center"><i class="fa fa fa-star-o"></i> STARHOTEL</h3>
-          <p class="text-center">An Exceptional Hotel Template!
-		  <br>
-		  <a href="room-list.aspx" class="btn btn-default btn-lg mt30">See rooms</a></p>
+          <p class="text-center">An Exceptional Hotel Template!</p>
+          <button class="btn btn-default btn-lg center-block">Get template</button>
         </div>
       </div>
     </div>
@@ -526,7 +505,7 @@
     <!-- Testimonials -->
     <section class="testimonials mt100">
       <div class="col-md-6">
-        <h2 class="lined-heading bounceInLeft appear" data-start="0"><span>What Other Visitors Experienced</span></h2>
+        <h2 class="lined-heading fadeIn appear" data-start="0"><span>What Other Visitors Experienced</span></h2>
         <div id="owl-reviews" class="owl-carousel">
           <div class="item">
             <div class="row">
@@ -563,7 +542,7 @@
     <!-- About -->
     <section class="about mt100">
       <div class="col-md-6">
-        <h2 class="lined-heading bounceInRight appear" data-start="800"><span>Hotel Tabs</span></h2>
+        <h2 class="lined-heading fadeIn appear" data-start="800"><span>Hotel Tabs</span></h2>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs">
           <li class="active"><a href="#hotel" data-toggle="tab">Our hotels</a></li>
@@ -660,6 +639,8 @@
 
 <!-- Go-top Button -->
 <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
+</div>
 
 </body>
 </html>
