@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "fuckthisshit", "..\..\WebSites\fuckthisshit\", "{CA926400-5DCB-418E-A600-02217B72BB99}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_5678"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\fuckthisshit\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5678\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_5678"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\fuckthisshit\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5678\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5678"
+		SlnRelativePath = "..\..\WebSites\fuckthisshit\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA926400-5DCB-418E-A600-02217B72BB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA926400-5DCB-418E-A600-02217B72BB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05B93296-3F03-4847-BC54-633F72B61B27}
+	EndGlobalSection
+EndGlobal
