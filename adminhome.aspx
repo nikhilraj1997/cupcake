@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="gallery.aspx.cs" Inherits="gallery" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="adminhome.aspx.cs" Inherits="admin" EnableSessionState="True"%>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8">
-<title>Starhotel - SHARED ON THEMELOCK.COM</title>
+<title>Al Salam Grand Hotel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -48,7 +48,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
 
 <!-- Top header -->
@@ -84,10 +83,7 @@
 </div>
 
 <!-- Header -->
-<!-- Header -->
-<!-- Header -->
 <header>
-  <!-- Navigation -->
   <div class="navbar yamm navbar-default" id="sticky">
     <div class="container">
       <div class="navbar-header">
@@ -100,7 +96,7 @@
         <ul class="nav navbar-nav">
           <li class="dropdown active"> <a href="index.aspx">Home</a>
           </li>    
-          <li><a href="cprofile.aspx">Corporate Profile</a></li>
+          <li><a href="#">Corporate Profile</a></li>
           <li><a href="room-list.aspx">Room & Suites</a></li>
           <li><a href="room-detail.aspx">Reservation</a></li>
           <li> <a href="gallery.aspx">Gallery</a></li>
@@ -110,6 +106,7 @@
     </div>
   </div>
 </header>
+
 <!-- Parallax Effect -->
 <script type="text/javascript">$(document).ready(function(){$('#parallax-pagetitle').parallax("50%", -0.55);});</script>
 
@@ -121,10 +118,10 @@
         <div class="row">
           <div class="col-sm-12">
             <ol class="breadcrumb">
-              <li><a href="index.aspx">Home</a></li>
-              <li class="active">Gallery</li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Rooms list view</li>
             </ol>
-            <h1>Gallery</h1>
+            <h1>Rooms list view</h1>
           </div>
         </div>
       </div>
@@ -137,43 +134,27 @@
   <div class="row">
     <div class="col-sm-12">
       <ul class="nav nav-pills" id="filters">
-        <li class="active"><a href="#" data-filter="*">All</a></li>
-        <li><a href="#" data-filter=".rooms">Rooms</a></li>
-        <li><a href="#" data-filter=".restaurant">Restaurant</a></li>
-        <li><a href="#" data-filter=".pool">Leisure</a></li>
-        <li><a href="#" data-filter=".business">Misc</a></li>
+        <li class="active"><a href="#">Bookings</a></li>
+        <li><a href="#">Manage</a></li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- Gallery -->
-<section id="gallery" class="mt50">
+<!-- Rooms -->
+<section class="rooms mt100">
   <div class="container">
-    <div class="row gallery"> 
-      <!-- Image 1 -->
-      <div class="col-sm-3 pool fadeIn appear"> <a href="images/gallery/gal1.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal1.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 2 -->
-      <div class="col-sm-3 restaurant fadeIn appear"> <a href="images/gallery/gal2.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal2.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 3 -->
-      <div class="col-sm-3 restaurant fadeIn appear"> <a href="images/gallery/gal3.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal3.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 4 -->
-      <div class="col-sm-3 business fadeIn appear"> <a href="images/gallery/gal4.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal4.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 5 -->
-      <div class="col-sm-3 rooms fadeIn appear"> <a href="images/gallery/gal5.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal5.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 6 -->
-      <div class="col-sm-3 rooms fadeIn appear"> <a href="images/gallery/gal6.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal6.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 7 -->
-      <div class="col-sm-3  rooms fadeIn appear"> <a href="images/gallery/gal7.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal7.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 8 -->
-      <div class="col-sm-3 rooms fadeIn appear"> <a href="images/gallery/gal8.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal8.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 1 -->
-      <div class="col-sm-3 restaurant fadeIn appear"> <a href="images/gallery/gal9.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal9.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 2 -->
-      <div class="col-sm-3 business fadeIn appear"> <a href="images/gallery/gal10.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal10.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-      <!-- Image 3 -->
-      <div class="col-sm-3 pool fadeIn appear"> <a href="images/gallery/gal11.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal11.jpg" alt="image" class="img-responsive zoom-img" /><i class="fa fa-search"></i></a> </div>
-     </div>
+      <div runat="server" id="test2"></div>
+      <div class="table-responsive">
+          <asp:Table class="table table-hover" runat="server" ID="info" BorderStyle="Solid">
+              <asp:TableHeaderRow BorderStyle="Solid">
+                  <asp:TableCell BorderStyle="Solid">E-mail</asp:TableCell>
+                  <asp:TableCell BorderStyle="Solid">Check-in</asp:TableCell>
+                  <asp:TableCell BorderStyle="Solid">Check-out</asp:TableCell>
+                  <asp:TableCell BorderStyle="Solid">Guests</asp:TableCell>
+              </asp:TableHeaderRow>
+          </asp:Table>
+      </div>
   </div>
 </section>
 
@@ -183,8 +164,8 @@
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <h4>About Starhotel</h4>
-        <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpat. <br>
-          <br>
+        <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpat. <br/>
+          <br/>
           Nunc ut fringilla urna. Cras vel adipiscing ipsum. Integer dignissim nisl eu lacus interdum facilisis. Aliquam erat volutpat. Nulla semper vitae felis vitae dapibus. </p>
       </div>
       <div class="col-md-3 col-sm-3">
@@ -192,7 +173,7 @@
         <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpa!</p>
         <form role="form">
           <div class="form-group">
-            <input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mailaddress">
+            <input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mailaddress"/>
           </div>
           <button type="submit" class="btn btn-lg btn-black btn-block">Submit</button>
         </form>
@@ -200,23 +181,23 @@
       <div class="col-md-3 col-sm-3">
         <h4>From our blog</h4>
         <ul>
-          <li><a href="#">Amazing post with all the goodies<br>
+          <li><a href="#">Amazing post with all the goodies<br/>
             January 23, 2014</a></li>
-          <li><a href="#">Integer dignissim nisl eu lacus<br>
+          <li><a href="#">Integer dignissim nisl eu lacus<br/>
             January 21, 2014</a></li>
-          <li><a href="#">Aliquam erat volutpat. Nulla semper<br>
+          <li><a href="#">Aliquam erat volutpat. Nulla semper<br/>
             January 14, 2014</a></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-3">
         <h4>Address</h4>
         <address>
-        <strong>Twitter, Inc.</strong><br>
-        795 Folsom Ave, Suite 600<br>
-        San Francisco, CA 94107<br>
-        <abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br>
-        <abbr title="Email">E:</abbr> <a href="#">mail@example.com</a><br>
-        <abbr title="Website">W:</abbr> <a href="#">www.slashdown.nl</a><br>
+        <strong>Twitter, Inc.</strong><br/>
+        795 Folsom Ave, Suite 600<br/>
+        San Francisco, CA 94107<br/>
+        <abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br/>
+        <abbr title="Email">E:</abbr> <a href="#">mail@example.com</a><br/>
+        <abbr title="Website">W:</abbr> <a href="#">www.slashdown.nl</a><br/>
         </address>
       </div>
     </div>
@@ -227,7 +208,7 @@
         <div class="col-xs-6"> &copy; 2014 Starhotel All Rights Reserved </div>
         <div class="col-xs-6 text-right">
           <ul>
-            <li><a href="contact-01.aspx">Contact</a></li>
+            <li><a href="contact-01.html">Contact</a></li>
           </ul>
         </div>
       </div>

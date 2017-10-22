@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="boxed-background.aspx.cs" Inherits="boxed_background" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8">
-<title>Al Salam Grand Hotel</title>
+<title>Starhotel - SHARED ON THEMELOCK.COM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -48,20 +48,12 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/59cd19134854b82732ff2913/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
+
 <body>
+
+<!-- Background image -->
+<img src="images/background/1200x800.gif" id="background-image" alt="background image">
+<div class="boxed"> 
 
 <!-- Top header -->
 <div id="top-header">
@@ -69,12 +61,23 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="th-text pull-left">
-          <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 00971-56-997-6381</a> </div>
-          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> reservation@alsalamgrandhotel.com </a></div>
+          <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 05-460789986</a> </div>
+          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> MAIL@STARHOTEL.COM </a></div>
         </div>
       </div>
       <div class="col-xs-6">
         <div class="th-text pull-right">
+          <div class="th-item">
+            <div class="btn-group">
+              <button class="btn btn-default btn-xs dropdown-toggle js-activated" type="button" data-toggle="dropdown"> English <span class="caret"></span> </button>
+              <ul class="dropdown-menu">
+                <li> <a href="#">ENGLISH</a> </li>
+                <li> <a href="#">FRANCE</a> </li>
+                <li> <a href="#">GERMAN</a> </li>
+                <li> <a href="#">SPANISH</a> </li>
+              </ul>
+            </div>
+          </div>
           <div class="th-item">
             <div class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-youtube-play"></i></a> </div>
           </div>
@@ -98,12 +101,64 @@
       <div id="navbar-collapse-grid" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="dropdown active"> <a href="index.aspx">Home</a>
-          </li>    
-          <li><a href="cprofile.aspx">Corporate Profile</a></li>
-          <li><a href="room-list.aspx">Room & Suites</a></li>
-          <li><a href="room-detail.aspx">Reservation</a></li>
+          </li>
+		  <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Rooms<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="room-list.aspx">Room List View</a></li>
+              <li><a href="room-detail.aspx">Room Detail</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Features<b class="caret"></b></a>
+            <div class="dropdown-menu"> 
+              <div class="yamm-content">
+                <div class="row">
+                  <ul class="col-sm-3 list-unstyled mt20">
+                    <li>
+                      <p><strong>Elements</strong></p>
+                    </li>
+					<li><a href="elements.aspx">Elements</a></li>
+					<li><a href="icons.aspx">Icons</a></li>
+                    <li><a href="404.aspx">404 Page</a></li>
+                  </ul>				
+				  <ul class="col-sm-3 list-unstyled mt20">
+                    <li>
+                      <p><strong>Layout</strong></p>
+                    </li>
+					<li><a href="boxed-pattern.aspx"><i class="fa fa-square-o"></i> Boxed</a></li>
+					<li><a href="index.aspx"><i class="fa fa-arrows-h"></i> Wide</a></li>
+                    <li><a href="boxed-background.aspx"><i class="fa fa-picture-o"></i> Image</a></li>
+                  </ul>					  
+				  <ul class="col-sm-6 list-unstyled mt20">
+                    <li>
+                      <p><strong>Yamm! Megamenu</strong></p>
+ 	  			      <ul class="list-unstyled">
+					    <li class="row">
+					      <ul class="col-sm-12 list-unstyled">
+							<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere justo posuere, commodo nibh sit amet, malesuada nisi. Nam vitae mauris vel ante laoreet placerat. Praesent pellentesque consectetur lobortis. Pellentesque lacinia nibh leo, sed pharetra tortor sagittis id. Cras a scelerisque eros. Nunc ornare diam turpis, id vulputate massa sagittis sed.
+							</li>
+                          </ul>
+					    </li>
+					  </ul>
+			        </li>	
+				  </ul>		
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Blog<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.aspx">Blog grid</a></li>
+              <li><a href="blog-post.aspx">Blog post</a></li>
+            </ul>
+          </li>
           <li> <a href="gallery.aspx">Gallery</a></li>
-          <li> <a href="contact-02.aspx">Contact Us</a></li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Contact<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="contact-01.aspx">Contact 1</a></li>
+              <li><a href="contact-02.aspx">Contact 2</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -116,9 +171,9 @@
     <div class="banner">
       <ul>
         <!-- Slide 1 -->
-        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height:100vh;"> 
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
           <!-- Main Image --> 
-          <img src="images/slides/1.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+          <img src="images/slides/1700x449.gif" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
           <!-- Layers -->           
           <!-- Layer 1 -->
           <div class="caption sft revolution-starhotel bigtext"  
@@ -127,7 +182,7 @@
                         data-speed="700" 
                         data-start="1700" 
                         data-easing="easeOutBack"> 
-						<span> Something here !</span></div>
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> A Five Star Hotel <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>
           <!-- Layer 2 -->
           <div class="caption sft revolution-starhotel smalltext"  
           				data-x="605" 
@@ -135,7 +190,7 @@
                         data-speed="800" 
                         data-start="1700" 
                         data-easing="easeOutBack">
-						<span>Something again here ! </span></div>
+						<span>And we like to keep it that way!</span></div>
         <!-- Layer 3 -->
                   <div class="caption sft"  
           				data-x="775" 
@@ -149,7 +204,7 @@
 		<!-- Slide 2 -->
         <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000" > 
           <!-- Main Image --> 
-          <img src="images/slides/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> 
+          <img src="images/slides/1700x449.gif"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> 
           <!-- Layers -->           
           <!-- Layer 1 -->
           <div class="caption sft revolution-starhotel bigtext"  
@@ -158,7 +213,7 @@
                         data-speed="700" 
                         data-start="1700" 
                         data-easing="easeOutBack"> 
-						<span>Something here ! </span></div>
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Double room <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>
           <!-- Layer 2 -->
           <div class="caption sft revolution-starhotel smalltext"  
           				data-x="682" 
@@ -166,7 +221,7 @@
                         data-speed="800" 
                         data-start="1700" 
                         data-easing="easeOutBack">
-						<span>Something here again</span></div>
+						<span>€ 99,- a night this summer</span></div>
         <!-- Layer 3 -->
                   <div class="caption sft"  
           				data-x="785" 
@@ -183,24 +238,24 @@
 </section>
 
 <!-- Reservation form -->
-<section id="reservation-form" >
+<section id="reservation-form">
   <div class="container">
     <div class="row">
       <div class="col-md-12">           
-        <form runat="server" class="form-inline reservation-horizontal clearfix" role="form" method="post" name="reservationform" id="reservationform">
+        <form class="form-inline reservation-horizontal clearfix" role="form" method="post" action="php/reservation.php" name="reservationform" id="reservationform">
         <div id="message"></div><!-- Error message display -->
-          <div class="row" >
+          <div class="row">
             <div class="col-sm-3">
               <div class="form-group">
                 <label for="email" accesskey="E">E-mail</label>
-                <input runat="server" name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
+                <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="form-group">
                 <label for="room">Room Type</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                <select runat="server" class="form-control" name="room" id="room">
+                <select class="form-control" name="room" id="room">
                   <option selected="selected" disabled="disabled">Select a room</option>
                   <option value="Single">Single room</option>
                   <option value="Double">Double Room</option>
@@ -213,7 +268,7 @@
                 <label for="checkin">Check-in</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <i class="fa fa-calendar infield"></i>
-                <input runat="server" name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
+                <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
               </div>
             </div>
             <div class="col-sm-2">
@@ -221,7 +276,7 @@
                 <label for="checkout">Check-out</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
                 <i class="fa fa-calendar infield"></i>
-                <input runat="server" name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
+                <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
               </div>
             </div>
             <div class="col-sm-1">
@@ -229,7 +284,7 @@
                 <div class="guests-select">
                   <label>Guests</label>
                   <i class="fa fa-user infield"></i>
-                  <div runat="server" class="total form-control" id="test">1</div>
+                  <div class="total form-control" id="test">1</div>
                   <div class="guests">
                     <div class="form-group adults">
                       <label for="adults">Adults</label>
@@ -256,7 +311,7 @@
               </div>
             </div>
             <div class="col-sm-2">
-              <asp:Button runat="server" class="btn btn-primary btn-block" OnClick="process" UseSubmitBehavior="False" Text="Book Now" />
+              <button type="submit" class="btn btn-primary btn-block">Book Now</button>
             </div>
           </div>
         </form>
@@ -264,6 +319,7 @@
     </div>
   </div>
 </section>
+
 <!-- Rooms -->
 <section class="rooms mt50">
   <div class="container">
@@ -273,10 +329,10 @@
       </div>
       <!-- Room -->
       <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/room1.jpg" alt="room 1" class="img-responsive" />
+        <div class="room-thumb"> <img src="images/rooms/356x228.gif" alt="room 1" class="img-responsive" />
           <div class="mask">
             <div class="main">
-              <h5>Standard King Bed </h5>
+              <h5>Double bedroom</h5>
               <div class="price">&euro; 99<span>a night</span></div>
             </div>
             <div class="content">
@@ -305,7 +361,7 @@
       </div>
       <!-- Room -->
       <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/room2.jpg" alt="room 2" class="img-responsive" />
+        <div class="room-thumb"> <img src="images/rooms/356x228.gif" alt="room 2" class="img-responsive" />
           <div class="mask">
             <div class="main">
               <h5>King Size Bedroom </h5>
@@ -337,7 +393,7 @@
       </div>
       <!-- Room -->
       <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/room2.jpg" alt="room 3" class="img-responsive" />
+        <div class="room-thumb"> <img src="images/rooms/356x228.gif" alt="room 3" class="img-responsive" />
           <div class="mask">
             <div class="main">
               <h5>Single room</h5>
@@ -381,47 +437,46 @@
       <div class="col-sm-3 bounceIn appear" data-start="0">
       <div class="box-icon">
         <div class="circle"><i class="fa fa-glass fa-lg"></i></div>
-        <h3>Hospitality at its true core ! </h3>
+        <h3>Beverages included</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
-       </div>
+        <a href="#">Read more<i class="fa fa-angle-right"></i></a> </div>
         </div>
       <div class="col-sm-3 bounceIn appear" data-start="400">
       <div class="box-icon">
         <div class="circle"><i class="fa fa-credit-card fa-lg"></i></div>
-        <h3>Gym facilities</h3>
+        <h3>Stay First, Pay After!</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
-         </div>
+        <a href="#">Read more<i class="fa fa-angle-right"></i></a> </div>
         </div>
       <div class="col-sm-3 bounceIn appear" data-start="800">
       <div class="box-icon">      
         <div class="circle"><i class="fa fa-cutlery fa-lg"></i></div>
-        <h3>Restaurant Services</h3>
+        <h3>24 Hour Restaurant</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
-         </div>
+        <a href="#">Read more<i class="fa fa-angle-right"></i></a> </div>
         </div>
       <div class="col-sm-3 bounceIn appear" data-start="1200">
       <div class="box-icon">
         <div class="circle"><i class="fa fa-tint fa-lg"></i></div>
-        <h3>Swimming Pool   </h3>
+        <h3>Spa Included!</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
-        </div>
+        <a href="#">Read more<i class="fa fa-angle-right"></i></a> </div>
     </div>
     </div>
   </div>
 </section>
 
 <!-- Parallax Effect -->
-<script type="text/javascript">$(document).ready(function(){$('#parallax-image').parallax("0%", -0.25);});</script>
+<script type="text/javascript">$(document).ready(function(){$('#parallax-image').parallax("50%", -0.25);});</script>
 
 <section class="parallax-effect mt100">
-  <div id="parallax-image" style="background-image: url(./images/parallax/p.jpg);">
+  <div id="parallax-image" style="background-image: url(./images/parallax/1900x911.gif);">
     <div class="color-overlay fadeIn appear" data-start="600">
       <div class="container">
         <div class="content">
-          <h3 class="text-center"> Al Salam Grand Hotel </h3>
-          <p class="text-center">Come to us… We will make sure your stay in Sharjah surpasses your expectations.
-		  <br/>
-		  <a href="room-list.aspx" class="btn btn-default btn-lg mt30">See rooms</a></p>
+          <h3 class="text-center"><i class="fa fa fa-star-o"></i> STARHOTEL</h3>
+          <p class="text-center">An Exceptional Hotel Template!</p>
+          <button class="btn btn-default btn-lg center-block">Get template</button>
         </div>
       </div>
     </div>
@@ -432,16 +487,16 @@
 <section class="gallery-slider mt100">
   <div class="container">
     <div class="row">
-      <div class="col-md-16">
+      <div class="col-md-12">
         <h2 class="lined-heading"><span>Gallery</span></h2>
       </div>
     </div>
   </div>
   <div id="owl-gallery" class="owl-carousel">
-    <div class="item"><a href="images/gallery/gal2.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal2.jpg" alt="Image 1"><i class="fa fa-search"></i></a></div>
-    <div class="item"><a href="images/gallery/gal3.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal3.jpg" alt="Image 2"><i class="fa fa-search"></i></a></div>
-    <div class="item"><a href="images/gallery/gal7.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal7.jpg" alt="Image 3"><i class="fa fa-search"></i></a></div>
-    <div class="item"><a href="images/gallery/gal9.jpg" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/gal9.jpg" alt="Image 4"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="images/gallery/800x504.gif" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/800x504.gif" alt="Image 1"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="images/gallery/800x504.gif" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/800x504.gif" alt="Image 2"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="images/gallery/800x504.gif" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/800x504.gif" alt="Image 3"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="images/gallery/800x504.gif" data-rel="prettyPhoto[gallery1]"><img src="images/gallery/800x504.gif" alt="Image 4"><i class="fa fa-search"></i></a></div>
   </div>
 </section>
 
@@ -450,7 +505,7 @@
     <!-- Testimonials -->
     <section class="testimonials mt100">
       <div class="col-md-6">
-        <h2 class="lined-heading bounceInLeft appear" data-start="0"><span>What Other Visitors Experienced</span></h2>
+        <h2 class="lined-heading fadeIn appear" data-start="0"><span>What Other Visitors Experienced</span></h2>
         <div id="owl-reviews" class="owl-carousel">
           <div class="item">
             <div class="row">
@@ -487,69 +542,83 @@
     <!-- About -->
     <section class="about mt100">
       <div class="col-md-6">
-        <h2 class="lined-heading bounceInRight appear" data-start="800"><span>About Us</span></h2>
+        <h2 class="lined-heading fadeIn appear" data-start="800"><span>Hotel Tabs</span></h2>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#hotel" data-toggle="tab">Al Salam Grand Hotel</a></li>
+          <li class="active"><a href="#hotel" data-toggle="tab">Our hotels</a></li>
+          <li><a href="#events" data-toggle="tab">Events</a></li>
+          <li><a href="#kids" data-toggle="tab">Kids</a></li>
+          <li><a href="#business" data-toggle="tab">Business</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane fade in active" id="hotel">
-            <p>The Al Salam Grand  Hotel is ideal place for business and leisure travelers, it is situated on the Heart City  of Sharjah .The tranquility of the region will divert in the  opportunity on a  charmed surroundings. Once you arrive, we will help you experience the remarkable stay and how delightfully we honored our guest. We are a local brand and, having the spirit of true confined hospitality, it’s a great pleasure to share our local knowledge to our visitors. We can assure you will have good memories and as well as comfortable stay here in our hotel hence , “Peace & Safety” that’s  what our hotel brand, Al Salam, means. </p>
-            <p><img src="images/tab/t.jpg" alt="food" class="pull-right">The destination that our hotels give you the opportunity to stay at some of the most beautiful tourist spots across Emirates region, while captivating all of your senses through our unique services, culinary offerings, natural beauty, warm friendly service, and more.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. In hendrerit risus arcu, in eleifend metus dapibus varius. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. Phasellus et mattis lectus, et gravida urna.</p>
+            <p><img src="images/tab/197x147.gif" alt="food" class="pull-right"> Donec pretium sem non tincidunt iaculis. Nunc at pharetra eros, a varius leo. Mauris id hendrerit justo. Mauris egestas magna vitae nisi ultricies semper. Nam vitae suscipit magna. Nam et felis nulla. Ut nec magna tortor. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. </p>
           </div>
+          <div class="tab-pane fade" id="events">Phasellus sodales justo felis, a vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.</div>
+          <div class="tab-pane fade" id="kids">Aa vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.</div>
+          <div class="tab-pane fade" id="business">...</div>
         </div>
       </div>
     </section>
   </div>
 </div>
+
+<!-- Call To Action -->
+<section id="call-to-action" class="mt100">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <h2>This is a Call to Action that you can use for all purposes!</h2>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="elements.aspx" class="btn btn-default btn-lg pull-right">More features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <h4>About Starhotel</h4>
-        <p>The comfort and serene accessible from Dubai and Sharjah airport it is drive away from 20 minutes. It is nearby the sightseeing place of Al Qasba Canal surrounded by prominent coffee shops & restaurants and Al Majaz Park overlooking Lagoon view which is one of the tourists spot around the area. The hotels also round the corner to Sharjah Expo Centre and Arab Mall. It is short distance from Deira City Centre and Dubai Mall proximity of 35 minute’s drive away.
-
+        <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpat. <br>
           <br>
-          <br>
-
- 
-
-Come to us… we will make sure your stay in Sharjah surpasses your expectations.      </div>
-      <div class="col-md-3 col-sm-3">
-        <h4>Recieve our newsletter</h4>
-        <p>To receive daily offers and discounts , please subscribe to our newsletter ! </p>
-          <button id="myButton" class="btn btn-lg btn-black btn-block">Click here to subscribe</button>
-      <script type="text/javascript">
-          document.getElementById("myButton").onclick = function () {
-              location.href = "nletter.aspx";
-          };
-</script>
+          Nunc ut fringilla urna. Cras vel adipiscing ipsum. Integer dignissim nisl eu lacus interdum facilisis. Aliquam erat volutpat. Nulla semper vitae felis vitae dapibus. </p>
       </div>
       <div class="col-md-3 col-sm-3">
-        <h4>SiteMap</h4>
-           <div class="social-icons"> 
-               <a href="#">Home</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-               <a href="#">Corporate Profile</a> 
-               <br/> <br />
-                <a href="#">Room & Suites</a> &emsp;
-               <a href="#">Reservation</a> 
-               <br/> <br />
-                <a href="#">Gallery</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-               <a href="#">Contact us</a> 
-               <br/> <br /> 
-
-           </div>
+        <h4>Recieve our newsletter</h4>
+        <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpa!</p>
+        <form role="form">
+          <div class="form-group">
+            <input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mailaddress">
+          </div>
+          <button type="submit" class="btn btn-lg btn-black btn-block">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <h4>From our blog</h4>
+        <ul>
+          <li><a href="#">Amazing post with all the goodies<br>
+            January 23, 2014</a></li>
+          <li><a href="#">Integer dignissim nisl eu lacus<br>
+            January 21, 2014</a></li>
+          <li><a href="#">Aliquam erat volutpat. Nulla semper<br>
+            January 14, 2014</a></li>
+        </ul>
       </div>
       <div class="col-md-3 col-sm-3">
         <h4>Address</h4>
         <address>
-        <strong>Al Salam Grand Hotel</strong><br>
-        P.O BOX 64111 , Al Taawun Road,<br>
-        Sharjah, United Arab Emirates<br>
-        <abbr title="Phone">P:</abbr> <a href="#">00971-6-501-4222</a><br>
-        <abbr title="Email">E:</abbr> <a href="#">reservation@alsalamgrandhotel.com</a><br>
+        <strong>Twitter, Inc.</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br>
+        <abbr title="Email">E:</abbr> <a href="#">mail@example.com</a><br>
+        <abbr title="Website">W:</abbr> <a href="#">www.slashdown.nl</a><br>
         </address>
       </div>
     </div>
@@ -557,7 +626,7 @@ Come to us… we will make sure your stay in Sharjah surpasses your expectations
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
-        <div class="col-xs-6"> &copy; 2017 All Rights Reserved to Al Salam Grand Hotel </div>
+        <div class="col-xs-6"> &copy; 2014 Starhotel All Rights Reserved </div>
         <div class="col-xs-6 text-right">
           <ul>
             <li><a href="contact-01.aspx">Contact</a></li>
@@ -568,6 +637,10 @@ Come to us… we will make sure your stay in Sharjah surpasses your expectations
   </div>
 </footer>
 
+<!-- Go-top Button -->
+<div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
+</div>
 
 </body>
 </html>

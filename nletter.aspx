@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contact-02.aspx.cs" Inherits="contact_02" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="room-list.aspx.cs" Inherits="room_list" %>
 
 <!DOCTYPE html>
 
@@ -36,6 +36,8 @@
 <script type="text/javascript" src="js/jquery.sticky.js"></script> 
 <script type="text/javascript" src="js/waypoints.min.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
+<script type="text/javascript" src="js/jquery.gmap.min.js"></script> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script> 
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
 <script type="text/javascript" src="js/custom.js"></script> 
@@ -55,8 +57,8 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="th-text pull-left">
-          <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 00971-56-997-6381</a> </div>
-          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> reservation@alsalamgrandhotel.com</a></div>
+          <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 05-460789986</a> </div>
+          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> MAIL@STARHOTEL.COM </a></div>
         </div>
       </div>
       <div class="col-xs-6">
@@ -66,6 +68,9 @@
               <button class="btn btn-default btn-xs dropdown-toggle js-activated" type="button" data-toggle="dropdown"> English <span class="caret"></span> </button>
               <ul class="dropdown-menu">
                 <li> <a href="#">ENGLISH</a> </li>
+                <li> <a href="#">FRANCE</a> </li>
+                <li> <a href="#">GERMAN</a> </li>
+                <li> <a href="#">SPANISH</a> </li>
               </ul>
             </div>
           </div>
@@ -78,6 +83,7 @@
   </div>
 </div>
 
+<!-- Header -->
 <!-- Header -->
 <!-- Header -->
 <header>
@@ -103,11 +109,12 @@
       </div>
     </div>
   </div>
-</header><!-- Parallax Effect -->
+</header>
+<!-- Parallax Effect -->
 <script type="text/javascript">$(document).ready(function(){$('#parallax-pagetitle').parallax("50%", -0.55);});</script>
 
 <section class="parallax-effect">
-  <div id="parallax-pagetitle" style="background-image: url(./images/parallax/1900x911.gif);">
+  <div id="parallax-pagetitle" style="background-image: url(./images/parallax/p.jpg);">
     <div class="color-overlay"> 
       <!-- Page title -->
       <div class="container">
@@ -115,86 +122,34 @@
           <div class="col-sm-12">
             <ol class="breadcrumb">
               <li><a href="index.aspx">Home</a></li>
-              <li class="active">Contact</li>
+              <li class="active">Rooms list view</li>
             </ol>
-            <h1>Contact</h1>
+            <h1>News Letter Subscription </h1>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="container">
-  <div class="row"> 
-    
-    <!-- Contact details -->
-    <section class="contact-details">
-      <div class="col-md-5">
-        <h2 class="lined-heading  mt50"><span>Address</span></h2>
-        <!-- Panel -->
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <div class="panel-title"><i class="fa fa-star"></i> <strong>Starhotel</strong></div>
-          </div>
-          <div class="panel-body">
-            <address>
-            P.O BOX 64111 , Al Taawun Road,<br>
-          Sharjah, United Arab Emirates<br>
-            <abbr title="Phone">P:</abbr> <a href="#">00971-56-997-6381</a><br>
-            <abbr title="Email">E:</abbr> <a href="#">reservation@alsalamgrandhotel.com</a><br>
-            </address>
-          </div>
+</div>
+        </div></div>
+    </section>
+    <br /> <br />
+    <div class="container" >
+	<div class="row">
+        <div class="span12">
+    		<div class="thumbnail center well well-small text-center">
+                <h2>Newsletter</h2>
+                <p>Subscribe to our Newsletter and stay tuned.</p>
+                <form role="form" runat="server">
+                    <div class="form-group">
+                        <input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mail address">
+                    </div>
+                    <asp:Button runat="server" ID="news" Text="Subscribe!" class="btn btn-lg btn-black btn-block" UseSubmitBehavior="false" OnClick="news_Click" />
+                    
+                </form>
+            </div>    
         </div>
-        <!-- GMap -->
-		<div class="mt30">
-          <div id="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1803.4438500075137!2d55.37279952025314!3d25.307976835926983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b89bdb48be1%3A0xfd071e5e3aab9f9b!2sAL+SALAM+GRAND+HOTEL+Sharjah!5e0!3m2!1sen!2sin!4v1507986116887" width="455" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>          
-
-          </div>
-		</div>
-      </div>
-    </section>
-    
-    <!-- Contact form -->
-    <section id="contact-form" class="mt50">
-      <div class="col-md-7">
-        <h2 class="lined-heading"><span>Send a message</span></h2>
-        <p>For any kind of Booking or Room related query , feel free to drop us a message and we would get back to you as soon as we can .</p>
-        <div id="message"></div>
-        <!-- Error message display -->
-        <form class="clearfix mt50" role="form" runat="server" name="contactform" id="contactform">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="name" accesskey="U"><span class="required">*</span> Your Name</label>
-                <input runat="server" name="name" type="text" id="name" class="form-control" value=""/>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="email" accesskey="E"><span class="required">*</span> E-mail</label>
-                <input runat="server" name="email" type="text" id="email" value="" class="form-control"/>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="subject" accesskey="S">Subject</label>
-            <select name="subject" id="subject" class="form-control" runat="server">
-              <option value="Booking">Booking</option>
-              <option value="a Room">Room</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="comments" accesskey="C"><span class="required">*</span> Your message</label>
-            <textarea name="comments" rows="9" id="comments" class="form-control" runat="server"></textarea>
-          </div>
-          <asp:Button runat="server" class="btn  btn-lg btn-primary" OnClick="submitmsg" UseSubmitBehavior="False" Text="Book Now" />
-        </form>
-      </div>
-    </section>
-  </div>
-</div><!-- Footer -->
+	</div>
+</div>
+<!-- Footer -->
+<!-- Footer -->
 <footer>
   <div class="container">
     <div class="row">
